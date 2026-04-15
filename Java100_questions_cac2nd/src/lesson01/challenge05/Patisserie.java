@@ -29,6 +29,47 @@
 
 package lesson01.challenge05;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		System.out.println("たいへんお待たせしました。");
+		System.out.println("【ポエール・ネルメ】");
+		System.out.println("ただいまより開店です！！");
+
+		int citronStock = 30;
+		int chocolatStock = 30;
+		int pistacheStock = 30;
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+		System.out.println("シトロン      \\250 ・・・ 残り" + citronStock + "個");
+		System.out.println("ショコラ      \\280 ・・・ 残り" + chocolatStock + "個");
+		System.out.println("ピスターシュ  \\320 ・・・ 残り" + pistacheStock + "個");
+
+		//文字入力とそれをint型へ変換
+		System.out.println("それぞれ何個ずつ買いますか？");
+		BufferedReader recorder = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("\nシトロン　　＞");
+		String str = recorder.readLine();
+		int st = Integer.parseInt(str);
+
+		System.out.print("ショコラ　　＞");
+		String syo = recorder.readLine();
+		int syok = Integer.parseInt(syo);
+
+		System.out.print("ピスターシュ　　＞");
+		String pis = recorder.readLine();
+		int pist = Integer.parseInt(pis);
+
+		int total = st + syok + pist;
+		System.out.println("\n合計個数" + total + "個");
+
+		int k = (st * 250) + (syok * 280) + (pist * 320);
+		System.out.println("合計金額" + k + "円");
+		System.out.println("\nをお買いあげですね。\n承りました。");
+
+	}
 
 }

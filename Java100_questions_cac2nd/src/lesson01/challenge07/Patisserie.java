@@ -41,6 +41,52 @@
 
 package lesson01.challenge07;
 
-public class Patisserie {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
+public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		//変数準備
+		int citronStock = 30;
+		int chocolatStock = 30;
+		int pistacheStock = 30;
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("\nそれぞれ何個ずつ買いますか？（最大30個まで）\n");
+
+		//文字の入力 doubleへの変換
+		System.out.print("シトロン      >");
+		String citronBuyCountStr = reader.readLine();
+		double citronBuyCount = Double.parseDouble(citronBuyCountStr);
+
+		System.out.print("ショコラ      >");
+		String chocolatBuyCountStr = reader.readLine();
+		double chocolatBuyCount = Double.parseDouble(chocolatBuyCountStr);
+
+		System.out.print("ピスターシュ  >");
+		String pistacheBuyCountStr = reader.readLine();
+		double pistacheBuyCount = Double.parseDouble(pistacheBuyCountStr);
+
+		System.out.println("\nシトロン     " + citronBuyCount + "個");
+		System.out.println("ショコラ     " + chocolatBuyCount + "個");
+		System.out.println("ピスターシュ " + pistacheBuyCount + "個");
+
+		//合計の表示
+
+		System.out.println("\n合計個数 " + (citronBuyCount + chocolatBuyCount + pistacheBuyCount) + "個");
+		int tatalmo = (int) ((citronBuyCount * 250) + (chocolatBuyCount * 280) + (pistacheBuyCount * 320));
+		System.out.println("合計金額" + tatalmo + "円");
+
+		//型変換duobleからint 小数を切り捨て
+		citronStock = (int) (citronStock - citronBuyCount);
+		chocolatStock = (int) (chocolatStock - chocolatBuyCount);
+		pistacheStock = (int) (pistacheStock - pistacheBuyCount);
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+		System.out.println("シトロン      \\250 ・・・ 残り" + citronStock + "個");
+		System.out.println("ショコラ      \\280 ・・・ 残り" + chocolatStock + "個");
+		System.out.println("ピスターシュ  \\320 ・・・ 残り" + pistacheStock + "個");
+
+	}
 }
