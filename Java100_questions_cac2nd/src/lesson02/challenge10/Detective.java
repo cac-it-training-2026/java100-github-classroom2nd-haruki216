@@ -88,6 +88,9 @@ public class Detective {
 
 		//ここに記述する
 
+		String ans = (num == 1) ? "不正解です" : "正解です";
+		System.out.println("\n探偵：");
+		System.out.println(ans);
 	}
 
 }

@@ -79,27 +79,45 @@ import java.io.InputStreamReader;
 
 public class Explorer {
 
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 
-        System.out.println("隊長：");
-        System.out.println("トラ発見！\n");
+		System.out.println("隊長：");
+		System.out.println("トラ発見！\n");
 
-        int deepSleepTime = (int) (Math.random() * 10 % 3) + 1;
-        int goTime = 0;
+		int deepSleepTime = (int) (Math.random() * 10 % 3) + 1;
+		int goTime = 0;
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+		//ここにfor文、if文を利用した処理を記述
 
-        //ここにfor文、if文を利用した処理を記述
+		for (int i = 0; i < 3; i++) {
 
+			if (i < 2) {
+				System.out.println("隊長:\n" + (i + 1) + "時間経過");
+				System.out.println("今通り抜けますか？(はい…１：いいえ…２＞)");//文字入力は２回目までのでここにいれる
 
-        if (deepSleepTime == goTime) {
-            System.out.println("\n隊長：");
-            System.out.println("成功！トラはぐっすり寝ています。");
-        } else {
-            System.out.println("\n隊長：");
-            System.out.println("しまったトラがまだ起きてた！");
-        }
+				String go = br.readLine();
+				int chance = Integer.parseInt(go);
+				if (chance == 1) { //はいを選んだらその回数の値を入れる
+					goTime = i + 1;
+					break;
+				}
+			} else {
+				System.out.println((i + 1) + "時間経過");
+				System.out.println("もう後がないので通りますね");
+				goTime = 3;
+			}
 
-    }
+		}
+
+		if (deepSleepTime == goTime) {
+			System.out.println("\n隊長：");
+			System.out.println("成功！トラはぐっすり寝ています。");
+		} else {
+			System.out.println("\n隊長：");
+			System.out.println("しまったトラがまだ起きてた！");
+		}
+
+	}
 }
