@@ -44,42 +44,64 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 //ここにSpaceshipクラスを記述する
+class Spaceship {
+	private double fuelNum;
+	private double lightyear;
 
+	public void setter(double fuelNum, double lightyear) {
+		this.fuelNum = fuelNum;
+		this.lightyear = lightyear;
+	}
+
+	public double Fuelgetter() {
+		return fuelNum;
+	}
+
+	public double Lightgetter() {
+		return lightyear;
+	}
+
+	public boolean compareFuel(double fuelNum, double lightyear) {
+		boolean ischeck = false;
+		if (fuelNum == Math.max(fuelNum, lightyear)) {
+			ischeck = true;
+		}
+		return ischeck;
+	}
+}
 
 public class Astronaut {
 
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 
-        System.out.println("宇宙飛行士：");
-        System.out.println("航続距離が気になるな～。");
-        System.out.println("燃料と比べてみるか。\n");
+		System.out.println("宇宙飛行士：");
+		System.out.println("航続距離が気になるな～。");
+		System.out.println("燃料と比べてみるか。\n");
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("航続距離を入力してください＞");
-        String lightYearStr = br.readLine();
-        double lightYear = Double.parseDouble(lightYearStr);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("航続距離を入力してください＞");
+		String lightYearStr = br.readLine();
+		double lightYear = Double.parseDouble(lightYearStr);
 
-        System.out.print("燃料を入力してください＞");
-        String fuelStr = br.readLine();
-        double fuelNum = Double.parseDouble(fuelStr);
+		System.out.print("燃料を入力してください＞");
+		String fuelStr = br.readLine();
+		double fuelNum = Double.parseDouble(fuelStr);
 
+		//ここに適切な処理を記述する
 
-        //ここに適切な処理を記述する
+		boolean isCheck = false;
+		Spaceship spaceship = new Spaceship();
 
+		//ここに適切な処理を記述する
+		spaceship.setter(fuelNum, lightYear);
+		isCheck = spaceship.compareFuel(spaceship.Fuelgetter(), spaceship.Lightgetter());
 
-        boolean isCheck = false;
-
-
-        //ここに適切な処理を記述する
-
-
-        System.out.println("\n宇宙飛行士：");
-        if(isCheck){
-            System.out.println("よし！たどり着けるぞ。");
-        } else {
-            System.out.println("これじゃあたどり着けないよう。どうしよう。。。");
-        }
-    }
+		System.out.println("\n宇宙飛行士：");
+		if (isCheck) {
+			System.out.println("よし！たどり着けるぞ。");
+		} else {
+			System.out.println("これじゃあたどり着けないよう。どうしよう。。。");
+		}
+	}
 }
