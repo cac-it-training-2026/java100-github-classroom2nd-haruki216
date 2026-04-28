@@ -61,12 +61,39 @@ public class WarehouseManager {
 
 	public static void main(String[] args) {
 
-
 		//ここに必要な配列の宣言を記述する。
-
+		int[] randomboxC = new int[5];
+		int[] randomboxD = new int[5];
+		int[] randomboxE = new int[5];
 
 		//ここに配列に値を代入する処理を記述する。(要素はランダム)
-
+		for (int i = 0; i < 5; i++) {
+			int randomnum = (int) (Math.random() * 10 % 4 + 1);
+			int random = (int) (Math.random() * 10);
+			if (randomnum == 1) {
+				randomboxC[i] = 0;
+			} else {
+				randomboxC[i] = random;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			int randomnum = (int) (Math.random() * 10 % 4 + 1);
+			int random = (int) (Math.random() * 10);
+			if (randomnum == 1) {
+				randomboxC[i] = 0;
+			} else {
+				randomboxC[i] = random;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			int randomnum = (int) (Math.random() * 10 % 4 + 1);
+			int random = (int) (Math.random() * 10);
+			if (randomnum == 1) {
+				randomboxC[i] = 0;
+			} else {
+				randomboxC[i] = random;
+			}
+		}
 
 		System.out.println("E主任：");
 		System.out.println("MQ運送から預かった荷物の確認をお願いします。\n");
@@ -76,21 +103,24 @@ public class WarehouseManager {
 
 		System.out.print("C...");
 
-
 		//ここに配列Cの要素をすべて出力する処理を記述する。
-
+		for (int i : randomboxC) {
+			System.out.print(i);
+		}
 
 		System.out.print("\n\nD...");
 
-
-		//ここに配列Dの要素をすべて出力する処理を記述する。
-
+		//ここに配列Dの要素をすべて出力する処理を記述する
+		for (int i : randomboxD) {
+			System.out.print(i);
+		}
 
 		System.out.print("\n\nE...");
 
-
 		//ここに配列Eの要素をすべて出力する処理を記述する。
-
+		for (int i : randomboxE) {
+			System.out.print(i);
+		}
 
 		System.out.println("\n\nです。\n");
 

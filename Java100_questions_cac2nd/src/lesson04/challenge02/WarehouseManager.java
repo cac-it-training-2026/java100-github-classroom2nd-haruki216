@@ -94,22 +94,23 @@ public class WarehouseManager {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.print("データ型を選んでください（1...文字、2...文字列、3...数値）＞");
-
+		String inputstr = br.readLine();
+		int inputnum = Integer.parseInt(inputstr);
 
 		//ここに入力処理を記述する。
-
 
 		System.out.print("\n要素数を選んでください（1...1個、2...2個、3...3個）＞");
-
+		String inputstr2 = br.readLine();
+		int inputnum2 = Integer.parseInt(inputstr2);
 
 		//ここに入力処理を記述する。
 
-
 		boolean errFlag = false;
-
+		if ((inputnum < 1 || inputnum > 3) || (inputnum2 < 0 || inputnum2 > 3)) {
+			errFlag = true;
+		}
 
 		//ここに入力値の範囲チェック処理を記述する。
-
 
 		if (!errFlag) {
 			System.out.println("\nZ先輩：");
@@ -126,10 +127,59 @@ public class WarehouseManager {
 			String[] strArray = null;
 			int[] intArray = null;
 
-
 			//ここに入力値による分岐および配列要素数の確定、
 			//値の代入処理を記述する。
+			if (inputnum == 1) {
+				if (inputnum2 == 1) {
+					charArray = new char[1];
+					charArray[0] = 'a';
 
+				} else if (inputnum2 == 2) {
+					charArray = new char[2];
+					charArray[0] = 'a';
+					charArray[1] = 'b';
+
+				} else {
+					charArray = new char[3];
+					charArray[0] = 'a';
+					charArray[1] = 'b';
+					charArray[2] = 'c';
+				}
+			} else if (inputnum == 2) {
+				if (inputnum2 == 1) {
+					strArray = new String[1];
+					strArray[0] = "abc";
+				} else if (inputnum2 == 2) {
+					strArray = new String[2];
+					strArray[0] = "abc";
+					strArray[1] = "def";
+
+				} else {
+					strArray = new String[3];
+					strArray[0] = "abc";
+					strArray[1] = "def";
+					strArray[2] = "ghi";
+				}
+
+			} else {
+				if (inputnum2 == 1) {
+					intArray = new int[1];
+					intArray[0] = 0;
+
+				} else if (inputnum2 == 2) {
+					intArray = new int[2];
+					intArray[0] = 0;
+					intArray[1] = 1;
+
+				} else {
+
+					intArray = new int[3];
+					intArray[0] = 0;
+					intArray[1] = 1;
+					intArray[2] = 2;
+				}
+
+			}
 
 			System.out.println("Yさん：");
 			System.out.println("...出来ました。\n");
@@ -139,10 +189,16 @@ public class WarehouseManager {
 
 			System.out.println("Yさん：");
 
-
 			//ここに入力値による分岐および配列要素の表示処理を記述する。
 
+			if (inputnum == 1) {
+				System.out.println(charArray[charArray.length - 1]);
+			} else if (inputnum == 2) {
+				System.out.println(strArray[strArray.length - 1]);
 
+			} else {
+				System.out.println(intArray[intArray.length - 1]);
+			}
 			System.out.println("です。\n");
 
 			System.out.println("Z先輩：");

@@ -32,10 +32,6 @@ class Samurai {
 	 */
 	protected String name;
 
-	public Samurai() {
-		name = "テスト太郎";
-	}
-
 	//ここにフィールドnameを記述
 
 	void fight() {
@@ -56,8 +52,6 @@ class Samurai {
 //ここにRetainerクラスを記述
 class Retainer extends Samurai {
 
-	protected String name;
-
 	public Retainer() {
 		name = "テスト太郎";
 
@@ -76,8 +70,6 @@ class Retainer extends Samurai {
 
 //ここにRoninクラスを記述
 class Ronin extends Samurai {
-
-	protected String name;
 
 	public Ronin() {
 		name = "テスト兵衛";
