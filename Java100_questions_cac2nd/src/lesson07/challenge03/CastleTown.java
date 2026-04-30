@@ -49,7 +49,7 @@ class Retainer extends Samurai {
 }
 
 //ここにMagistrateクラスを記述
-
+//侍クラスを継承した藩士クラスを継承
 class Magistrare extends Retainer {
 	public void judge() {
 		System.out.println("判決を下すよ～");
@@ -81,7 +81,7 @@ public class CastleTown {
 		System.out.println("奉行1：");
 		Magistrare magistrare = new Magistrare();
 		magistrare.fight();
-		magistrare.getPaid();
+		magistrare.getPaid(); //それぞれ侍クラス、藩士クラスのメソッドを使用
 		magistrare.judge();
 
 		//ここに必要な処理を記述

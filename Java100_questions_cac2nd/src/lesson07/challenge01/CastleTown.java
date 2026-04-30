@@ -34,6 +34,7 @@ class Samurai {
 }
 
 //ここにRetainerクラスを記述
+//samuraiクラスを継承
 class Retainer extends Samurai {
 	public void getPaid() {
 		System.out.println("給料をもらうよ～");
@@ -54,7 +55,7 @@ public class CastleTown {
 
 		System.out.println("藩士1：");
 		Retainer retainer = new Retainer();
-		retainer.fight();
+		retainer.fight(); //samuraiクラスのメソッドを使用
 		retainer.getPaid();
 
 		//ここに必要な処理を記述

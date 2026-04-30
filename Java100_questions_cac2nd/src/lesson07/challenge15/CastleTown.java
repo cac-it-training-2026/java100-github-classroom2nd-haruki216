@@ -30,7 +30,10 @@ interface ICelebrity extends IchiefTresurer {
 }
 
 //ここにIChiefRetainerインターフェースを記述
+//インターフェースを継承したインターフェースをさらに継承している
 interface IChiefRetainer extends ICelebrity {
+
+	//interfaceは抽象メソッドしか使用できない
 	public void stay();
 
 }
@@ -43,6 +46,7 @@ class Samurai {
 //ここにRetainerクラスを記述
 class Retainer extends Samurai implements IChiefRetainer {
 
+	//それぞれのメソッドをオーバーライド
 	public void calculate() {
 		System.out.println("藩の計算をするよ～。");
 	}

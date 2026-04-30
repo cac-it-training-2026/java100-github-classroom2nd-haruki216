@@ -43,6 +43,7 @@ class Retainer extends Samurai {
 
 	}
 
+	// 侍クラスのメソッドをオーバーライドしている
 	public void work() {
 		System.out.println("年貢を取り立てるよー");
 	}

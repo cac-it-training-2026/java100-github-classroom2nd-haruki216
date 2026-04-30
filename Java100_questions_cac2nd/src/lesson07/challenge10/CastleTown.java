@@ -25,6 +25,7 @@
 package lesson07.challenge10;
 
 //ここにSamuraiクラスを記述
+//抽象クラス、メソッドを作成
 abstract class Samurai {
 	abstract void work();
 }

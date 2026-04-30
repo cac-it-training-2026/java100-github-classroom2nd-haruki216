@@ -30,6 +30,7 @@ class Samurai {
 	/**
 	 * @param name
 	 */
+	//protectedを使用することでサブクラスでのみアクセスできる
 	protected String name;
 
 	//ここにフィールドnameを記述
@@ -52,6 +53,7 @@ class Samurai {
 //ここにRetainerクラスを記述
 class Retainer extends Samurai {
 
+	//samuraiクラスでのnameを使用している
 	public Retainer() {
 		name = "テスト太郎";
 
@@ -83,6 +85,7 @@ class Ronin extends Samurai {
 		System.out.println("傘張るよー");
 	}
 
+	//toStirngのオーバーライド
 	public String toString() {
 		String str = "拙者は○△□藩士、" + name + "ともうす。";
 		return str;

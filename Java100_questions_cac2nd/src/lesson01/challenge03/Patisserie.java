@@ -23,6 +23,7 @@ package lesson01.challenge03;
 
 public class Patisserie {
 	public static void main(String[] args) {
+		//int 型の変数を宣言
 		int st = 30;
 		int syk = 30;
 		int pis = 30;

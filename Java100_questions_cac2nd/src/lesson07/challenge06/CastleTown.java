@@ -41,6 +41,7 @@ final class UltimateSwordman extends Samurai {
 }
 
 //ここにEasySwordsmanクラスを記述
+//ULtimateSwordmanはfinal修飾子を使用しているので継承ができない
 class EasySwordsman extends UltimateSwordman {
 
 }

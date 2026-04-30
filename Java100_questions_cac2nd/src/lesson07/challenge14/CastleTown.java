@@ -42,6 +42,8 @@ abstract class Samurai {
 
 //ここにRetainerクラスを記述
 class Retainer implements IchiefTresurer, ICelebrity {
+
+	//interfaceのメソッドをオーバーライドしている
 	public void learn() {
 		System.out.println("茶道を嗜むよ～。");
 	}

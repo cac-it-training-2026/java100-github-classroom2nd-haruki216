@@ -80,6 +80,7 @@ public class CastleTown {
 
 		//ここに適切な処理を記述
 		for (int i = 0; i < 5; i++) {
+			//samurai[i]番目がretainer型のオブジェクトかどうか判断している
 			if (samurais[i] instanceof Retainer) {
 				retainerCount++;
 			} else {

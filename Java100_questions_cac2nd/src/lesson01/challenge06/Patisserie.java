@@ -60,7 +60,7 @@ public class Patisserie {
 		System.out.println("シトロン　　　" + havst + "個");
 		System.out.println("ショコラ　　　" + havsyk + "個");
 		System.out.println("ピスターシュ　" + havpis + "個");
-
+		//合計個数と金額を足して求める
 		int total = havst + havsyk + havpis;
 		int tatalmo = (int) ((havst * 250) + (havsyk * 280) + (havpis * 320));
 
@@ -71,7 +71,7 @@ public class Patisserie {
 
 		System.out.println("\n本日のおすすめ商品です");
 
-		//それぞれの変数か入力された数を引く
+		//それぞれの変数が入力された数を引く
 		System.out.println("シトロン  \\250  ・・・残り" + ((int) (st - havst)) + "個");
 		System.out.println("シトロン  \\280　・・・残り" + ((int) (syk - havsyk)) + "個");
 		System.out.println("シトロン　\\320　・・・残り" + ((int) (pis - havpis)) + "個");

@@ -42,6 +42,7 @@ class Ronin extends Samurai {
 		System.out.println("傘張りするよ～");
 	}
 
+	//侍クラスのメソッドをオーバライドしている
 	public void work() {
 		System.out.println("傘張るよー");
 	}

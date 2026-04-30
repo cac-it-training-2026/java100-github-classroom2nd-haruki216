@@ -36,12 +36,12 @@ public class Patisserie {
 	public static void main(String[] args) throws IOException {
 		// TODO 自動生成されたメソッド・スタブ
 		System.out.println("それぞれ何個ずつ買いますか？（最大30個まで）");
-
+		//コンソールからの入力
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.print("シトロン >");
 		String str = reader.readLine();
-		int st = Integer.parseInt(str);
+		int st = Integer.parseInt(str);// 文字列からint型に変換
 
 		System.out.print("ショコラ >");
 		String str2 = reader.readLine();
