@@ -18,28 +18,51 @@
 
 package lesson07.challenge12;
 
-
 //ここにIChiefTreasurerインターフェースを記述
+interface IChiefTreasurer {
 
+	public void calculate();
+
+}
 
 //ここにSamuraiクラスを記述
+class Samurai {
 
+	void fight() {
+		System.out.println("戦うよ～。");
+	}
+
+}
 
 //ここにRetainerクラスを記述
-
+class Retainer extends Samurai {
+	public void getPaid() {
+		System.out.println("給料をもらうよ～");
+	}
+}
 
 //ここにMagistrateクラスを記述
+class Magistrare extends Retainer implements IChiefTreasurer {
+	public void judge() {
+		System.out.println("判決を下すよ～");
+	}
 
+	public void calculate() {
+		System.out.println("藩の計算をするよ～。");
+	}
+
+}
 
 public class CastleTown {
 
-    public static void main(String[] args) {
-        System.out.println("奉行に勘定奉行を兼ねてもらうことになりました。\n");
+	public static void main(String[] args) {
+		System.out.println("奉行に勘定奉行を兼ねてもらうことになりました。\n");
 
-        System.out.println("奉行1：");
+		System.out.println("奉行1：");
 
+		//ここに適切な処理を記述
+		Magistrare magi = new Magistrare();
+		magi.calculate();
 
-        //ここに適切な処理を記述
-
-    }
+	}
 }

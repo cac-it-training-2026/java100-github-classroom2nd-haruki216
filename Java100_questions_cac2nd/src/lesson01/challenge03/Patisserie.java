@@ -22,5 +22,15 @@
 package lesson01.challenge03;
 
 public class Patisserie {
+	public static void main(String[] args) {
+		//int 型の変数を宣言
+		int st = 30;
+		int syk = 30;
+		int pis = 30;
 
+		System.out.println("シトロン　　　\\250・・・残り" + st + "個");
+		System.out.println("ショコラ　　　\\280・・・残り" + syk + "個");
+		System.out.println("ピスターシュ　\\320・・・残り" + pis + "個");
+
+	}
 }

@@ -66,12 +66,39 @@ public class WarehouseManager {
 
 	public static void main(String[] args) {
 
-
 		//ここに必要な配列の宣言を記述する。
-
+		int[] randomboxC = new int[5];
+		int[] randomboxD = new int[5];
+		int[] randomboxE = new int[5];
 
 		//ここに配列に値を代入する処理を記述する。(要素はランダム)
-
+		for (int i = 0; i < 5; i++) {
+			int randomnum = (int) (Math.random() * 10 % 4 + 1);
+			int random = (int) (Math.random() * 10);
+			if (randomnum == 1) {
+				randomboxC[i] = 0;
+			} else {
+				randomboxC[i] = random;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			int randomnum = (int) (Math.random() * 10 % 4 + 1);
+			int random = (int) (Math.random() * 10);
+			if (randomnum == 1) {
+				randomboxD[i] = 0;
+			} else {
+				randomboxD[i] = random;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			int randomnum = (int) (Math.random() * 10 % 4 + 1);
+			int random = (int) (Math.random() * 10);
+			if (randomnum == 1) {
+				randomboxE[i] = 0;
+			} else {
+				randomboxE[i] = random;
+			}
+		}
 
 		System.out.println("E主任：");
 		System.out.println("MQ運送の件、お願いします。\n");
@@ -81,48 +108,88 @@ public class WarehouseManager {
 
 		System.out.print("C...");
 
-
 		//ここに配列Cの要素をすべて出力する処理を記述する。
-
+		for (int i = 0; i < 5; i++) {
+			if (1 != 4) {
+				System.out.print(randomboxC[i]);
+			} else {
+				System.out.println(randomboxC[i]);
+			}
+		}
 
 		System.out.print("\n\nD...");
 
-
 		//ここに配列Dの要素をすべて出力する処理を記述する。
-
-
+		for (int i = 0; i < 5; i++) {
+			if (1 != 4) {
+				System.out.print(randomboxD[i]);
+			} else {
+				System.out.println(randomboxD[i]);
+			}
+		}
 		System.out.print("\n\nE...");
 
-
 		//ここに配列Eの要素をすべて出力する処理を記述する。
-
+		for (int i = 0; i < 5; i++) {
+			if (1 != 4) {
+				System.out.print(randomboxE[i]);
+			} else {
+				System.out.println(randomboxE[i]);
+			}
+		}
 
 		System.out.println("\n\nでした。直してきます...\n");
 
-
 		//ここに詰め替え処理を記述する
-
+		int[] list = new int[15];
+		int index = 0;
+		for (int i = 0; i < 5; i++) {
+			if (randomboxC[i] != 0) {
+				list[index] = randomboxC[i];
+				index++;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			if (randomboxD[i] != 0) {
+				list[index] = randomboxD[i];
+				index++;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			if (randomboxE[i] != 0) {
+				list[index] = randomboxE[i];
+				index++;
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			randomboxC[i] = list[i];
+			randomboxD[i] = list[i + 5];
+			randomboxE[i] = list[i + 10];
+		}
 
 		System.out.println("Yさん：");
 		System.out.println("直してきました。\n");
 
 		System.out.print("C...");
 
-
 		//ここに配列Cの要素をすべて出力する処理を記述する。
 
-
+		for (int i : randomboxC) {
+			System.out.print(i);
+		}
 		System.out.print("\n\nD...");
 
-
 		//ここに配列Dの要素をすべて出力する処理を記述する。
-
+		for (int i : randomboxD) {
+			System.out.print(i);
+		}
 
 		System.out.print("\n\nE...");
 
-
 		//ここに配列Eの要素をすべて出力する処理を記述する。
-
+		for (int i : randomboxE) {
+			System.out.print(i);
+		}
 
 		System.out.println("\n\nになりました。\n");
 
